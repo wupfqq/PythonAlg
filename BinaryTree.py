@@ -138,6 +138,22 @@ class BinaryTree:
 
         return
 
+    def get_max(self):
+        temp=self
+        while(temp.rch!=None):
+              temp=temp.rch
+        return temp.root
+
+    def get_min(self):
+        temp = self
+        while (temp.lch != None):
+            temp = temp.lch
+        return temp.root
+
+
+
+
+
 b1=BinaryTree(8)
 b1.insertion(3)
 b1.insertion(18)
@@ -149,10 +165,10 @@ b1.insertion(30)
 b1.insertion(26)
 b1.insertion(13)
 b1.insertion(14)
-
 b1.del_node(18)
 b1.pre_order()
-
+print(b1.get_min())
+print(b1.get_max())
 
 
 
